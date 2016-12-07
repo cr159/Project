@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<store>
+	<film>
+		<title>Keeping Up with the Joneses</title>
+    <genre>Comedy</genre>
+    <release>21 October 2016</release>
+		<director>Greg Mottola</director>
+    <productioncompany>Fox 2000 Pictures</productioncompany>
+    <time>105 minutes</time>
+		<price>€17</price>
+  </film>
+</store>

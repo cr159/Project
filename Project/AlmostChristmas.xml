@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<store>
+	<film>
+		<title>Almost Christmas</title>
+    <genre>Comedy</genre>
+    <release>11 November 2016</release>
+		<director>David E. Talbert</director>
+    <productioncompany>Perfect World Pictures</productioncompany>
+    <time>111 minutes</time>
+		<price>€15</price>
+  </film>
+</store>

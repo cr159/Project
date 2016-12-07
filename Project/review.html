@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <title>Project</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+	  <div id="banner">
+	    <div id="welcome">
+	      <h2>Film Shop</h2>
+	    </div>		  	
+	  </div>
+	</header>
+
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="review.html">Review</a></li>
+					<li><a href="ReviewForm.html">Review Form</a></li>
+        </ul>
+      </div>
+	</nav>
+	
+	<?php include 'index1.php';?>
+	  
+
+<h1>Reviews</h1>
+
+<div id='showData' ></div><br>
+
+<input type="button" onclick="previous()" value="<<Previous">
+<input type="button" onclick="next()" value="Next>>">
+
+<script>
+var i = 0;
+displayData(i);
+
+function displayData(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            myFunction(xmlhttp, i);
+        }
+    };
+    xmlhttp.open("GET", "review.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("review");
+    document.getElementById("showData").innerHTML =
+    "Name: " +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "<br>Review: " +
+    x[i].getElementsByTagName("comment")[0].childNodes[0].nodeValue +
+    "<br>Time: " + 
+    x[i].getElementsByTagName("time")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+if (i < x.length-1) {
+  i++;
+  displayData(i);
+  }
+}
+
+function previous() {
+if (i > 0) {
+  i--;
+  displayData(i);
+  }
+}
+</script>
+
+  <div id="content">
+        <div class="login">
+		
+		<body>
+		  
+	
+		 <section class ="container">
+					
+				</section>
+					</body>
+      		</div>
+      </div>	
+  
+	
+	<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+div {
+    background-color: lightblue;
+}
+</style>
+
+
+  
+<footer>
+	  <a href="index.html">Home</a> | <a href="login.html">Log In</a> | <a href="review.html">Review</a> | <a href="ReviewForm.html">Review Form</a><br/><br/>
+</footer> 	
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/image_slide.js"></script>	
+  
+</body>
+</html>

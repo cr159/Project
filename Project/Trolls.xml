@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<store>
+	<film>
+		<title>Trolls</title>
+    <genre>Animation</genre>
+    <release>4 November 2016</release>
+		<director>Mike Mitchell + Walt Dohrn</director>
+    <productioncompany>DreamWorks Animation</productioncompany>
+    <time>93 minutes</time>
+		<price>€16</price>
+  </film>
+</store>
