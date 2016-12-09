@@ -1,3 +1,0 @@
-We couldnt get github working so we worked on the files together 
-uploaded them to one codeanywhere account
-and then uploaded them to github manually
